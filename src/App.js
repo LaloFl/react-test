@@ -1,12 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// React Router DOM
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
 
-import Button from 'components/Button';
+import Button from "components/Button";
 
 function App() {
   return (
-    <div className="App">
-      <Button text="soy un botón"></Button>
+    <div>
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={() => <Button text="Soy el boton del home" />}
+          />
+          <Route
+            exact
+            path="/fabian"
+            component={() => <Button text="Soy el boton del fabo" />}
+          />
+          
+        </Switch>
+      </Router>
     </div>
   );
 }

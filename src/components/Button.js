@@ -3,8 +3,9 @@ import "./styles.css";
 function Button(props) {
   return (
     <>
-      <button className="button">{props.text}</button>
-      <button className="button">{props.text}</button>
+      <button onClick={props.onClick} className="button">
+        {props.text}
+      </button>
     </>
   );
 }

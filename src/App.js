@@ -3,23 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
 import Button from "components/Button";
-
+import { HomeRouter } from "routers/home";
 function App() {
   return (
     <div>
       <Router>
         <Switch>
-          <Route
-            exact
-            path="/"
-            component={() => <Button text="Soy el boton del home" />}
-          />
-          <Route
-            exact
-            path="/fabian"
-            component={() => <Button text="Soy el boton del fabo" />}
-          />
-          
+          <Route path="/" render={(props) => <HomeRouter {...props} />} />
         </Switch>
       </Router>
     </div>

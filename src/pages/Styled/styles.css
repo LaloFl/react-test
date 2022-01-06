@@ -1,0 +1,19 @@
+/* Classes */
+.styled__container{
+    background-color: red;
+    color: white;
+    /* margin */
+    margin: 4rem 2rem;
+    /* padding */
+    padding: 2rem;
+}
+.styled__container h1{
+    color: green;
+}
+.styled__container span{
+    color: black;
+}
+/* ID */
+#styled__main{
+    height: auto;
+}

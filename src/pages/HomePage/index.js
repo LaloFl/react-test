@@ -26,7 +26,7 @@ export default function HomePage() {
       />
       <Button  
         
-        text={"Restar"}
+        text={"Restarr"}
         onClick={() => dispatch({ type: actions.REST_COUNTER })}
       />
 

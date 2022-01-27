@@ -1,0 +1,56 @@
+.styled__container
+    background-color: #4D7298
+    color: #fff
+    /* margin */
+    margin: 4rem 2rem
+    /* padding */
+    padding: 2rem
+    height: 100vh
+    h1
+        color: #fff
+    span
+        color: #f2f2f2
+    .button__container
+        display: flex
+        margin: 2rem 0
+        flex-direction: row
+        justify-content: flex-start //Column
+        align-items: flex-start //Row
+        gap: 3rem
+        button
+            background-color: yellow
+            color: white
+        button:first-child
+            background-color: blue
+        button:last-child
+            background-color: pink
+        button:nth-child(2)
+            background-color: black
+            // animation: gob 0.5s infinite ease-in-out
+    .grid__content
+        // Display grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr
+        grid-template-areas: "left right"
+        .grid__item
+            padding: 2rem 1rem
+        .grid__content__left
+            grid-area: right
+            background-color: #B3D89C
+        .grid__content__right
+            grid-area: left
+            background-color: #77A6B6
+@keyframes gob
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(1.2)
+    100%
+        transform: scale(1)
+@media screen and (max-width:500px)
+    .styled__container
+        .grid__content
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr 1fr
+            grid-template-areas: "left" "right"

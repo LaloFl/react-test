@@ -1,6 +1,11 @@
 import { actions } from "./actions";
 import { initialState } from "./constants";
 
+// export function reducer (state = initialState, action) {
+
+// } 
+
+
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.ADD_COUNTER:
@@ -8,6 +13,11 @@ export const reducer = (state = initialState, action) => {
         ...state,
         counter: state.counter + 1,
       };
+    case actions.ADD_2_COUNTER:
+    return{
+     ...state,
+     counter: state.counter +2,
+    }; 
     case actions.REST_COUNTER:
       return {
         ...state,

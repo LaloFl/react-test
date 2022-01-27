@@ -5,6 +5,15 @@ import { actions } from "./reducer/actions";
 import { initialState } from "./reducer/constants";
 import { reducer } from "./reducer";
 
+
+import React from 'react';
+
+export function PruebaPrueba() {
+  const [state, dispatch] = useReducer(reducer, initialState)
+  return <div></div>;
+}
+
+
 export default function HomePage() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
@@ -15,10 +24,17 @@ export default function HomePage() {
         text={"Agregar"}
         onClick={() => dispatch({ type: actions.ADD_COUNTER })}
       />
-      <Button
+      <Button  
+        
         text={"Restar"}
         onClick={() => dispatch({ type: actions.REST_COUNTER })}
       />
+
+      <Button 
+      className = {"boton2"}
+      text = {"Suma 2"} 
+      onClick={function(){dispatch ({type:actions.ADD_2_COUNTER})}}
+      ></Button>
     </div>
   );
 }
